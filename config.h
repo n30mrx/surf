@@ -7,6 +7,12 @@ static char *certdir        = "~/.surf/certificates/";
 static char *cachedir       = "~/.surf/cache/";
 static char *cookiefile     = "~/.surf/cookies.txt";
 
+static SearchEngine searchengines[] = {
+	{ " ", "https://duckduckgo.com/?q=%s" },
+	{ "g ",   "http://www.google.de/search?q=%s"   },
+	{ "osrs ", "https://oldschool.runescape.wiki/?search=%s" },
+};
+
 /* Webkit default features */
 /* Highest priority value will be used.
  * Default parameters are priority 0
